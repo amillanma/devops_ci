@@ -80,7 +80,7 @@ public class BasicApplicationTests {
         this.mockMvc.perform(post("/billing").header("Authorization", "Basic " + encoding)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(mockdto))
-        ).andDo(print()).andExpect(status().isOk());
+        ).andDo(print()).andExpect(status().isNoContent());
     }
 
     /**
